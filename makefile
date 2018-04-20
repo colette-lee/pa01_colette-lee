@@ -19,4 +19,3 @@ stats.o: stats.cpp
 
 clean:
 	rm -f statexam stattest *.o
-
