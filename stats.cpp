@@ -14,7 +14,6 @@ statistician::statistician(){
 void statistician::next(double r){
   theLength+=1;
   theSum+= r;
-  average = theSum/theLength;
   if (theLength==1){
     min = r;
     max = r;
@@ -26,7 +25,6 @@ void statistician::next(double r){
 void statistician::reset( ){
   theLength = 0;
   theSum = 0;
-  average = 0;
   min = 0;
   max = 0;
 }
@@ -39,7 +37,8 @@ double statistician::sum( ) const{
   return theSum;
 }
 double statistician::mean( ) const{
-  return average;
+  if (theLength==0) return 0;
+  return theSum/theLength;
 }
 double statistician::minimum( ) const{
   return min;

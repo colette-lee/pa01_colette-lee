@@ -83,7 +83,6 @@ private:
     //Write the attributes of statistician here
     int theLength;
     double theSum;
-    double average;
     double min;
     double max;
     
